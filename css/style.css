@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap');
+
+:root{
+    /* Fuente */
+    --font: 'League Spartan', sans-serif;
+
+    /* Colores */
+    --very-dark-magenta: hsl(300, 43%, 22%);
+    --soft-pink: hsl(333, 80%, 67%);
+    --dark-grayish-magenta: hsl(303, 10%, 53%);
+    --light-rayish-agenta: hsl(300, 24%, 96%);
+    --white: hsl(0, 0%, 100%);
+}
+
+*{
+    margin: 0px;
+    box-sizing: content-box;
+}
+
+body{
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: var(--font);
+    font-size: 15px;
+    background-color: var(--white);
+    background: url("../images/bg-pattern-top-desktop.svg") no-repeat left top, url("../images/bg-pattern-bottom-desktop.svg") no-repeat bottom right;
+}
+
+.principal{
+    width: 80%;
+    max-width: 1200px;
+    height: 80%;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.element{
+    width: 100%;
+    height: 50%;
+    display: flex;
+}
+
+.element__section1{
+    width: 50%;
+}
+
+.informacion{
+    display: flex;
+    flex-direction: column;
+    gap: 20px
+}
+
+.paragraph__tip{
+    color: var(--very-dark-magenta);
+    line-height: 1.5;
+
+}
+
+.title{
+    color: var(--very-dark-magenta);
+    font-weight: 700;
+    font-size: 2.5em;
+    line-height: 1;
+}
+
+.valoraciones{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    padding-left: 5em;
+}
+
+.element__valoraciones{
+    display: flex;
+    align-items: center;
+    gap: 0 20px;
+
+    width: 340px;
+    background-color: var(--light-rayish-agenta);
+    padding: 1em .6em 1em 2em;
+    color: var(--very-dark-magenta);
+    font-weight: 700;
+    border-radius: 5px;
+}
+
+.valoracion__1{
+    align-self: flex-start;
+}
+
+.valoracion__2{
+    align-self: center;
+}
+
+.valoracion__3{
+    align-self: flex-end;
+}
+
+.principal__section2{
+    width: 100%;
+
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.element__opinion{
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 1;
+    flex-grow: 1;
+
+    background-color: var(--very-dark-magenta);
+    border-radius: 5px;
+    padding: 2.5em;
+    font-weight: 400;
+    width: 270px;
+    height: 150px;
+    min-height: max-content;
+    gap: 20px;
+}
+
+.item__opinion{
+    gap: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.avatar{
+    border-radius: 50%;
+    width:40px;
+    height: 40px;
+}
+
+.datos__informacion{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.paragraph__datos{
+    color: var(--light-rayish-agenta);
+    font-weight: 500;
+}
+
+.verificacion{
+    font-weight: 400;
+    color: var(--soft-pink);
+}
+
+.paragraph__opinion{
+    color: var(--light-rayish-agenta);
+    line-height: 1.5;
+}
+
+.opinion__1{
+    align-self: flex-start;
+}
+
+.opinion__2{
+    align-self: center;
+}
+
+.opinion__3{
+    align-self: flex-end;
+}
+
+@media(max-width:768px){
+
+    body{
+        height: auto;
+        background: url("../images/bg-pattern-top-mobile.svg") no-repeat left top, url("../images/bg-pattern-bottom-mobile.svg") no-repeat bottom right;
+    }
+    .principal{
+        justify-content: center;
+        /* height: 100%; */
+        margin-top: 100px;
+        gap: 50px 0;
+    }
+
+
+    .principal__section1{
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .element__section1{
+        width: 100%;
+        height: 100%;
+    }
+    
+    .principal__section2{
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 100px;
+    }
+
+    .informacion{
+        justify-content: center;
+    }
+
+    .valoraciones{
+        padding: unset;
+        align-items: center;
+    }
+
+    .element__valoraciones{
+        flex-direction: column;
+        padding: 1em .3em 1em .3em;
+    }
+
+    .valoracion__1, .valoracion__2, .valoracion__3{
+        align-self: unset;
+    }
+
+    .opinion__1, .opinion__2, .opinion__3{
+        align-self: unset;
+    }
+
+}
